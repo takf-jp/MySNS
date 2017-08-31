@@ -4,7 +4,7 @@ const db = require('./server/database')
 //Server起動
 const express = require('express')
 const app = express()
-const portNo = 8080
+const portNo = process.env.PORT || 8080
 app.listen(portNo, () => {
 	console.log('Started!',`http://localhost:${portNo}`)
 })
